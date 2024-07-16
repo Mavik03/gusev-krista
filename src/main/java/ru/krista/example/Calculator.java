@@ -45,10 +45,11 @@ public class Calculator {
                     zero = false;
                     break;
                 } else {
-                    result = num1 + num2;
+                    System.out.println("Unsupported sign\n");
                     break;
                 }
             }
+            
             if(!zero) result = null;
     }
     public void printResult(){
