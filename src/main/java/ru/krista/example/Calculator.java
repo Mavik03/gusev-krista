@@ -45,9 +45,10 @@ public class Calculator {
                     zero = false;
                     break;
                 } else {
-                    System.out.println("Unsupported sign\n");
+                    result = num1 / num2;
                     break;
                 }
+            default: System.out.println("Unsupported sign\n");
             }
             
             if(!zero) result = null;

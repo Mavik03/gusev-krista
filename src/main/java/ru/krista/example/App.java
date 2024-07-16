@@ -1,7 +1,5 @@
 package ru.krista.example;
 
-import java.util.Scanner;
-
 /**
  * Hello world!
  */
