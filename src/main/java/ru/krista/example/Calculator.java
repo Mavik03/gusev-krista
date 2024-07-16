@@ -28,32 +28,40 @@ public class Calculator {
         zero = false;
         }
     }
+    public void add(){
+        result = num1 + num2;
+    }
+    public void difference(){
+        result = num1 - num2;
+    }public void multiplication(){
+        result = num1 * num2;
+    }public void division(){
+        if(num2.equals(0)) {
+            System.out.println("division by 0\n");
+            zero = false;
+        } else {
+            result = num1 / num2;
+        }
+    }
     public void doMath(){
         switch (parts[1]) {
             case "+":
-                result = num1 + num2;
+                add();
                 break;
             case "-":
-                result = num1 - num2;
+                difference();
                 break;
             case "*":
-                result = num1 * num2;
+                multiplication();
                 break;
             case "/":
-                if(num2.equals(0)) {
-                    System.out.println("division by 0\n");
-                    zero = false;
-                    break;
-                } else {
-                    result = num1 / num2;
-                    break;
-                }
+                division();
+                break;
             default: System.out.println("Unsupported sign\n");
             }
-            
             if(!zero) result = null;
     }
     public void printResult(){
-        if(!result.equals(null)) System.out.println(result);
+        if(result != null) System.out.println(result);
     }
 }
